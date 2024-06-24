@@ -9,7 +9,6 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'recetas', component: ConsultaRecetasComponent },
   { path: '**', component: NotFoundComponent }
-
 ];
 
 @NgModule({
