@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConsultaRecetasComponent } from './consulta-recetas/consulta-recetas.component';
-import { RecetasService } from './recetas.service';
+
 
 
 
@@ -12,6 +12,6 @@ import { RecetasService } from './recetas.service';
   imports: [
     CommonModule
   ],
-  providers: [RecetasService],
+  // providers: [RecetasService],
 })
 export class RecetasModule { }
