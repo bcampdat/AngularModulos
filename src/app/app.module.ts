@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InicioModule } from './inicio/inicio.module';
 import { RecetasModule } from './recetas/recetas.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { RecetasModule } from './recetas/recetas.module';
     BrowserModule,
     AppRoutingModule,
     InicioModule,
-    RecetasModule
+    RecetasModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
