@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConsultaRecetasComponent } from './consulta-recetas/consulta-recetas.component';
+import { FormsModule, NgForm } from '@angular/forms';
 
 
 
@@ -10,7 +11,8 @@ import { ConsultaRecetasComponent } from './consulta-recetas/consulta-recetas.co
     ConsultaRecetasComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   // providers: [RecetasService],
 })
