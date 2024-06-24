@@ -5,21 +5,28 @@ import { ICategoriasMeal, IMeals } from '../meal.interface';
 @Component({
   selector: 'app-consulta-recetas',
   templateUrl: './consulta-recetas.component.html',
-  styleUrls: ['./consulta-recetas.component.css']
+  styleUrls: ['./consulta-recetas.component.css'],
 })
 export class ConsultaRecetasComponent implements OnInit {
   categoriaSeleccionada: string = '';
   recetario: IMeals = {
-    meals: []
+    meals: [],
   };
   mostrarError = false;
   categorias: ICategoriasMeal = {
-    meals: []
+    meals: [],
   };
+
+  cols: any[] = [];
 
   constructor(private recetasService: RecetasService) {}
 
   ngOnInit(): void {
+    this.cols = [
+      { field: 'strMeal', header: 'Título' },
+      { field: 'strMealThumb', header: 'Foto' },
+    ];
+
     this.recetasService.getCategorias().subscribe({
       next: (data: ICategoriasMeal) => {
         console.log(data);
@@ -27,7 +34,7 @@ export class ConsultaRecetasComponent implements OnInit {
 
         this.mostrarError = false;
       },
-      error: (err) => (this.mostrarError = true)
+      error: (err) => (this.mostrarError = true),
     });
   }
 
@@ -40,7 +47,7 @@ export class ConsultaRecetasComponent implements OnInit {
         this.mostrarError = false;
       },
       error: (err) => (this.mostrarError = true),
-      complete: () => console.log('ok')
+      complete: () => console.log('ok'),
     });
   }
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConsultaRecetasComponent } from './consulta-recetas/consulta-recetas.component';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TableModule } from 'primeng/table';
 
 
 
@@ -12,7 +13,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    TableModule
   ],
   // providers: [RecetasService],
 })
